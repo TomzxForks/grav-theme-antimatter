@@ -44,10 +44,10 @@
     {% elseif truncate %}
         {% if page.summary != page.content %}
             <p>{{ page.content|truncate(550) }}</p>
+            <p><a href="{{ page.url }}">Continue Reading...</a></p>
         {% else %}
             <p>{{ page.content }}</p>
         {% endif %}
-        <p><a href="{{ page.url }}">Continue Reading...</a></p>
     {% else %}
         <p>{{ page.content }}</p>
         {% set show_prev_next = true %}
